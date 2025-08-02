@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abbasi Consultants - Premium Travel & Visa Services</title>
+    <meta name="description" content="Abbasi Consultants offers premium Hajj, Umrah, visa services and international tours.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Swiper JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <style>
+        :root {
+            --primary: #0f4c81;
+            --secondary: #f8b400;
+            --accent: #42b0ff;
+            --light: #f5f7fa;
+            --dark: #333333;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+            color: var(--dark);
+        }
+        
+        .heading-font {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        /* Hero section */
+        .hero {
+            background: linear-gradient(rgba(162, 167, 172, 0.85), rgba(15, 76, 129, 0.7)), 
+                        url(images/malaysia.jpg) no-repeat center center;
+            background-size: cover;
+            height: 100vh;
+            min-height: 600px;
+        }
+        .hero-section {
+  position: relative;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  animation: slideshow 18s infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* dark overlay for text visibility */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes slideshow {
+  0% { background-image: url('images/canada.jpg'); }
+  33% { background-image: url('images/malaysia.jpg'); }
+  66% { background-image: url('images/bg3.jpg'); }
+  100% { background-image: url('images/bg1.jpg'); }
+}
+
+        .plane-animation {
+            position: absolute;
+            top: 30%;
+            left: -200px;
+            animation: fly 15s linear infinite;
+            z-index: 10;
+        }
+        
+        @keyframes fly {
+            0% { transform: translateX(-200px) translateY(0px); }
+            25% { transform: translateX(25vw) translateY(-30px); }
+            50% { transform: translateX(50vw) translateY(0px); }
+            75% { transform: translateX(75vw) translateY(-15px); }
+            100% { transform: translateX(110vw) translateY(0px); }
+        }
+        
+        /* Navigation */
+        .navbar {
+            transition: all 0.3s ease;
+        }
+        
+        .navbar.scrolled {
+            background-color: rgba(15, 76, 129, 0.95) !important;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        /* Section animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+        
+        .fade-in.appear {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Services cards */
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        /* Testimonial carousel */
+        .testimonial-slide {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        /* FAQ accordion */
+        .faq-item {
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .faq-question {
+            transition: all 0.3s ease;
+        }
+        
+        .faq-question:hover {
+            color: var(--primary);
+        }
+        
+        .faq-toggle:checked ~ .faq-answer {
+            max-height: 1000px;
+        }
+        
+        .faq-toggle:checked ~ .faq-question i {
+            transform: rotate(180deg);
+        }
+        <style>
+  .whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    background-color: #25d366;
+    border-radius: 50%;
+    padding: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+
+  .whatsapp-float:hover {
+    transform: scale(1.1);
+  }
+
+  .whatsapp-float img {
+    width: 40px;
+    height: 40px;
+  }
+</style>
+<style>
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    background-color: #25d366;
+    border-radius: 50%;
+    padding: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    animation: bounce 2s infinite;
+    transition: transform 0.3s ease;
+  }
+
+  .whatsapp-float:hover {
+    transform: scale(1.1);
+  }
+
+  .whatsapp-float img {
+    width: 40px;
+    height: 40px;
+    display: block;
+  }
+</style>
+
+
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="navbar fixed w-full z-50 px-4 py-3 bg-transparent text-white">
+        <div class="container mx-auto flex flex-wrap items-center justify-between">
+            <a href="#" class="flex items-center">
+                <img src="images/Abbasi Consultant logo Final-01.png" alt="Abbasi Consultants Logo" class="h-12">
+            </a>
+            
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#home" class="text-white hover:text-yellow-300 transition">Home</a>
+                <a href="#about" class="text-white hover:text-yellow-300 transition">About Us</a>
+                <a href="#services" class="text-white hover:text-yellow-300 transition">Services</a>
+                <a href="#companies" class="text-white hover:text-yellow-300 transition">Group Companies</a>
+                <a href="#testimonials" class="text-white hover:text-yellow-300 transition">Testimonials</a>
+                <a href="#contact" class="text-white hover:text-yellow-300 transition">Contact</a>
+                <a href="#" class="bg-yellow-400 hover:bg-yellow-500 text-gray-800 px-6 py-2 rounded-lg transition">Book Now</a>
+            </div>
+            
+            <button class="md:hidden text-white focus:outline-none" id="mobile-menu-button">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div class="hidden md:hidden w-full bg-blue-900 py-4 px-4" id="mobile-menu">
+            <div class="flex flex-col space-y-4">
+                <a href="#home" class="text-white hover:text-yellow-300 transition">Home</a>
+                <a href="#about" class="text-white hover:text-yellow-300 transition">About Us</a>
+                <a href="#services" class="text-white hover:text-yellow-300 transition">Services</a>
+                <a href="#companies" class="text-white hover:text-yellow-300 transition">Group Companies</a>
+                <a href="#testimonials" class="text-white hover:text-yellow-300 transition">Testimonials</a>
+                <a href="#contact" class="text-white hover:text-yellow-300 transition">Contact</a>
+                <a href="#" class="bg-yellow-400 hover:bg-yellow-500 text-gray-800 px-6 py-2 rounded-lg text-center transition">Book Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero relative flex items-center justify-center text-center text-white">
+        <img src="images/plane.png" alt="Animated plane flying across screen" class="plane-animation">
+        
+        <div class="container mx-auto px-6 lg:px-20 relative z-20">
+            <h1 class="heading-font text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Your Journey Begins With Us</h1>
+            <p class="text-xl md:text-2xl mb-10 max-w-2xl mx-auto">Trusted travel and visa consultancy services with over 25 years of excellence</p>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#" class="bg-yellow-400 hover:bg-yellow-500 text-gray-800 font-semibold px-8 py-3 rounded-lg transition duration-300 transform hover:scale-105">Book Now</a>
+                <a href="#contact" class="bg-transparent border-2 border-white hover:bg-white hover:text-blue-900 text-white font-semibold px-8 py-3 rounded-lg transition duration-300 transform hover:scale-105">Free Consultation</a>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-0 right-0 flex justify-center">
+            <a href="#about" class="animate-bounce text-white text-4xl"><i class="fas fa-angle-down"></i></a>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <span class="text-yellow-500 font-semibold">ABOUT US</span>
+                <h2 class="heading-font text-3xl md:text-4xl font-bold mt-2 mb-4">Abbasi Consultants</h2>
+                <div class="h-1 w-20 bg-yellow-500 mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-12 items-center fade-in">
+                <div class="lg:w-1/2">
+                    <img src="images/about.jpg" alt="Abbasi Consultants office" class="rounded-lg shadow-xl w-full">
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <h3 class="heading-font text-2xl md:text-3xl font-bold mb-4">Your Trusted Travel Partner</h3>
+                    <p class="text-gray-600 mb-6">Founded in 1998, Abbasi Consultants has been providing exceptional travel and visa services to clients across Pakistan. With our extensive network and expertise, we make international travel seamless and hassle-free.</p>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div class="flex items-start">
+                            <div class="text-yellow-500 mr-3 mt-1"><i class="fas fa-check-circle"></i></div>
+                            <div>25+ Years Experience</div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="text-yellow-500 mr-3 mt-1"><i class="fas fa-check-circle"></i></div>
+                            <div>2000+ Clients Served</div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="text-yellow-500 mr-3 mt-1"><i class="fas fa-check-circle"></i></div>
+                            <div>50+ Countries Covered</div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="text-yellow-500 mr-3 mt-1"><i class="fas fa-check-circle"></i></div>
+                            <div>100% Satisfaction Guarantee</div>
+                        </div>
+                    </div>
+                    
+                    <a href="#" class="inline-block bg-blue-900 hover:bg-blue-800 text-white font-semibold px-6 py-3 rounded-lg transition">Learn More</a>
+                </div>
+            </div>
+            
+            <!-- Group Companies -->
+            <div class="mt-24 fade-in">
+                <h3 class="heading-font text-2xl md:text-3xl font-bold mb-12 text-center">Our Group Companies</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-lg transition text-center">
+                        <img src="images/abbasilogo.JPG" alt="Abbasi Hajj & Umrah Company Logo" class="h-16 mx-auto mb-6">
+                        <h4 class="heading-font text-xl font-bold mb-3">Abbasi Hajj & Umrah Company</h4>
+                        <p class="text-gray-600 mb-4">Specializing in spiritual journeys to Mecca and Medina with premium accommodations and guides.</p>
+                        <a href="#" class="text-blue-900 font-semibold text-sm hover:underline">Explore Services →</a>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-lg transition text-center">
+                        <img src="images/dream.JPG" alt="Dream World International Travel & Tours Logo" class="h-16 mx-auto mb-6">
+                        <h4 class="heading-font text-xl font-bold mb-3">Dream World International Travel & Tours</h4>
+                        <p class="text-gray-600 mb-4">Creating unforgettable international tour experiences with customized itineraries.</p>
+                        <a href="#" class="text-blue-900 font-semibold text-sm hover:underline">Explore Tours →</a>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-lg transition text-center">
+                        <img src="images/rehmani.JPG" alt="Rehmania Travel Agency Logo" class="h-16 mx-auto mb-6">
+                        <h4 class="heading-font text-xl font-bold mb-3">Rehmania Travel Agency</h4>
+                        <p class="text-gray-600 mb-4">Comprehensive travel solutions including ticketing, hotels, and transportation services.</p>
+                        <a href="#" class="text-blue-900 font-semibold text-sm hover:underline">View Packages →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <span class="text-yellow-500 font-semibold">OUR SERVICES</span>
+                <h2 class="heading-font text-3xl md:text-4xl font-bold mt-2 mb-4">Travel & Visa Solutions</h2>
+                <div class="h-1 w-20 bg-yellow-500 mx-auto"></div>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Comprehensive services tailored to meet all your travel needs</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Hajj Services -->
+                <div class="service-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300 hover:shadow-lg fade-in">
+                    <div class="relative h-48">
+                        <img src="images/hajj.JPG" alt="Muslim pilgrims at Kaaba" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-blue-900 to-transparent opacity-80"></div>
+                        <div class="absolute bottom-4 left-4">
+                            <div class="bg-yellow-400 text-blue-900 font-bold px-4 py-1 rounded-full text-sm">Hajj Services</div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="heading-font text-xl font-bold mb-2">Hajj Packages</h3>
+                        <p class="text-gray-600 mb-4">Comprehensive Hajj packages with premium accommodations, transportation, and guidance from scholars.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-blue-900 font-bold">From $3,500</span>
+                            <a href="#" class="text-blue-900 hover:text-yellow-500 font-semibold text-sm">More Details →</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Umrah Services -->
+                <div class="service-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300 hover:shadow-lg fade-in">
+                    <div class="relative h-48">
+                        <img src="images/umrah.JPG" alt="Masjid al-Haram at night" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-blue-900 to-transparent opacity-80"></div>
+                        <div class="absolute bottom-4 left-4">
+                            <div class="bg-yellow-400 text-blue-900 font-bold px-4 py-1 rounded-full text-sm">Umrah Services</div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="heading-font text-xl font-bold mb-2">Umrah Packages</h3>
+                        <p class="text-gray-600 mb-4">Tailored Umrah programs with options for budget to luxury accommodations near Haram.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-blue-900 font-bold">From $1,200</span>
+                            <a href="#" class="text-blue-900 hover:text-yellow-500 font-semibold text-sm">More Details →</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Visa Services -->
+                <div class="service-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300 hover:shadow-lg fade-in">
+                    <div class="relative h-48">
+                        <img src="images/visa.JPG" alt="Passports with visas" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-blue-900 to-transparent opacity-80"></div>
+                        <div class="absolute bottom-4 left-4">
+                            <div class="bg-yellow-400 text-blue-900 font-bold px-4 py-1 rounded-full text-sm">Visa Services</div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="heading-font text-xl font-bold mb-2">Visa Assistance</h3>
+                        <p class="text-gray-600 mb-4">Expert visa processing for all countries with high approval rates.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-blue-900 font-bold">Varies by Country</span>
+                            <a href="#" class="text-blue-900 hover:text-yellow-500 font-semibold text-sm">More Details →</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- International Tours -->
+                <div class="service-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300 hover:shadow-lg fade-in">
+                    <div class="relative h-48">
+                        <img src="images/inter.JPG" alt="Eiffel Tower" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-blue-900 to-transparent opacity-80"></div>
+                        <div class="absolute bottom-4 left-4">
+                            <div class="bg-yellow-400 text-blue-900 font-bold px-4 py-1 rounded-full text-sm">Tour Packages</div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="heading-font text-xl font-bold mb-2">International Tours</h3>
+                        <p class="text-gray-600 mb-4">Curated international tour packages to Europe, Turkey, Malaysia, and more.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-blue-900 font-bold">From $999</span>
+                            <a href="#" class="text-blue-900 hover:text-yellow-500 font-semibold text-sm">More Details →</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Ticketing -->
+                <div class="service-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300 hover:shadow-lg fade-in">
+                    <div class="relative h-48">
+                        <img src="images/air.JPG" alt="Airline tickets" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-blue-900 to-transparent opacity-80"></div>
+                        <div class="absolute bottom-4 left-4">
+                            <div class="bg-yellow-400 text-blue-900 font-bold px-4 py-1 rounded-full text-sm">Ticketing</div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="heading-font text-xl font-bold mb-2">Airline Ticketing</h3>
+                        <p class="text-gray-600 mb-4">Best price guarantee on international and domestic flights.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-blue-900 font-bold">Competitive Rates</span>
+                            <a href="#" class="text-blue-900 hover:text-yellow-500 font-semibold text-sm">More Details →</a>
+                        </div>
+                    </div>
+                </div>
+                <!---->
+                <!-- Travel Insurance -->
+                <div class="service-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300 hover:shadow-lg fade-in">
+                    <div class="relative h-48">
+                        <img src="images/travel.webp" alt="Travel insurance documents" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-blue-900 to-transparent opacity-80"></div>
+                        <div class="absolute bottom-4 left-4">
+                            <div class="bg-yellow-400 text-blue-900 font-bold px-4 py-1 rounded-full text-sm">Travel Insurance</div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="heading-font text-xl font-bold mb-2">Travel Insurance</h3>
+                        <p class="text-gray-600 mb-4">Comprehensive coverage including medical, trip cancellation, and baggage protection.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-blue-900 font-bold">From $50</span>
+                            <a href="#" class="text-blue-900 hover:text-yellow-500 font-semibold text-sm">More Details →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- -->
+    <!-- Group Companies Showcase -->
+    <section id="companies" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <span class="text-yellow-500 font-semibold">OUR GROUP</span>
+                <h2 class="heading-font text-3xl md:text-4xl font-bold mt-2 mb-4">Abbasi Group Companies</h2>
+                <div class="h-1 w-20 bg-yellow-500 mx-auto"></div>
+            </div>
+            
+            <!-- Abbasi Hajj & Umrah Company -->
+            <div class="mb-20 fade-in">
+                <div class="flex flex-col lg:flex-row gap-12 items-center mb-12">
+                    <div class="lg:w-1/2">
+                        <img src="images/madina.jpg" alt="Abbasi Hajj group" class="rounded-lg shadow-xl w-full">
+                    </div>
+                    
+                    <div class="lg:w-1/2">
+                        <div class="flex items-center mb-4">
+                            <img src="images/abbasilogo.JPG" alt="Abbasi Hajj Logo" class="h-12 mr-4">
+                            <h3 class="heading-font text-2xl font-bold">Abbasi Hajj & Umrah Company</h3>
+                        </div>
+                        <p class="text-gray-600 mb-6">Specializing exclusively in Hajj and Umrah services since 2005, we provide comprehensive pilgrimage packages with premium accommodations near Masjid al-Haram and Masjid an-Nabawi.</p>
+                        <div class="grid grid-cols-2 gap-4 mb-6">
+                            <div class="flex">
+                                <div class="text-yellow-500 mr-3 mt-1"><i class="fas fa-star"></i></div>
+                                <div>5-Star Rated Packages</div>
+                            </div>
+                            <div class="flex">
+                                <div class="text-yellow-500 mr-3 mt-1"><i class="fas fa-user-tie"></i></div>
+                                <div>Certified Mutawwifs</div>
+                            </div>
+                            <div class="flex">
+                                <div class="text-yellow-500 mr-3 mt-1"><i class="fas fa-hotel"></i></div>
+                                <div>Premium Accommodations</div>
+                            </div>
+                            <div class="flex">
+                                <div class="text-yellow-500 mr-3 mt-1"><i class="fas fa-bus"></i></div>
+                                <div>Air-Conditioned Transport</div>
+                            </div>
+                        </div>
+                        <a href="#" class="inline-block bg-blue-900 hover:bg-blue-800 text-white font-semibold px-6 py-3 rounded-lg transition">View Hajj Packages</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Dream World Travel -->
+            <div class="mb-20 fade-in">
+                <div class="flex flex-col lg:flex-row gap-12 items-center mb-12">
+                    <div class="lg:w-1/2 order-2 lg:order-1">
+                        <div class="flex items-center mb-4">
+                            <img src="images/dream.JPG" alt="Dream World Logo" class="h-12 mr-4">
+                            <h3 class="heading-font text-2xl font-bold">Dream World International Travel & Tours</h3>
+                        </div>
+                        <p class="text-gray-600 mb-6">Since 2010, Dream World has been creating magical travel experiences with customized tours to over 50 countries, specializing in Europe, Turkey, Malaysia, and the Middle East.</p>
+                        <div class="grid grid-cols-2 gap-4 mb-6">
+                            <div class="flex">
+                                <div class="text-yellow-500 mr-3 mt-1"><i class="fas fa-globe"></i></div>
+                                <div>50+ Destinations</div>
+                            </div>
+                            <div class="flex">
+                                <div class="text-yellow-500 mr-3 mt-1"><i class="fas fa-user-graduate"></i></div>
+                                <div>Multilingual Guides</div>
+                            </div>
+                            <div class="flex">
+                                <div class="text-yellow-500 mr-3 mt-1"><i class="fas fa-utensils"></i></div>
+                                <div>Halal Cuisine</div>
+                            </div>
+                            <div class="flex">
+                                <div class="text-yellow-500 mr-3 mt-1"><i class="fas fa-mosque"></i></div>
+                                <div>Prayer Facilities</div>
+                            </div>
+                        </div>
+                        <a href="#" class="inline-block bg-blue-900 hover:bg-blue-800 text-white font-semibold px-6 py-3 rounded-lg transition">Explore Tours</a>
+                    </div>
+                    
+                    <div class="lg:w-1/2 order-1 lg:order-2">
+                        <img src="images/multi.webp" alt="Dream World tour" class="rounded-lg shadow-xl w-full">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Rehmania Travel -->
+            <div class="fade-in">
+                <div class="flex flex-col lg:flex-row gap-12 items-center mb-12">
+                    <div class="lg:w-1/2">
+                        <img src="images/makkah2.jpeg" alt="Rehmania Travel office" class="rounded-lg shadow-xl w-full">
+                    </div>
+                    
+                    <div class="lg:w-1/2">
+                        <div class="flex items-center mb-4">
+                            <img src="images/rehmani.JPG" alt="Rehmania Logo" class="h-12 mr-4">
+                            <h3 class="heading-font text-2xl font-bold">Rehmania Travel Agency</h3>
+                        </div>
+                        <p class="text-gray-600 mb-6">Established in 2015, Rehmania provides comprehensive travel solutions including ticketing, hotel bookings, transportation, and corporate travel management services.</p>
+                        <div class="grid grid-cols-2 gap-4 mb-6">
+                            <div class="flex">
+                                <div class="text-yellow-500 mr-3 mt-1"><i class="fas fa-plane"></i></div>
+                                <div>Best Price Guarantee</div>
+                            </div>
+                            <div class="flex">
+                                <div class="text-yellow-500 mr-3 mt-1"><i class="fas fa-building"></i></div>
+                                <div>Corporate Accounts</div>
+                            </div>
+                            <div class="flex">
+                                <div class="text-yellow-500 mr-3 mt-1"><i class="fas fa-shield-alt"></i></div>
+                                <div>Secure Transactions</div>
+                            </div>
+                            <div class="flex">
+                                <div class="text-yellow-500 mr-3 mt-1"><i class="fas fa-headset"></i></div>
+                                <div>24/7 Support</div>
+                            </div>
+                        </div>
+                        <a href="#" class="inline-block bg-blue-900 hover:bg-blue-800 text-white font-semibold px-6 py-3 rounded-lg transition">Contact for Rates</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Counter -->
+    <section class="py-16 bg-blue-900 text-white">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center fade-in">
+                <div class="p-4">
+                    <div class="text-4xl md:text-5xl font-bold mb-3 counter" data-target="5000">1000+</div>
+                    <div class="text-lg">Happy Clients</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl md:text-5xl font-bold mb-3 counter" data-target="50">multiple</div>
+                    <div class="text-lg">Countries</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl md:text-5xl font-bold mb-3 counter" data-target="25">25</div>
+                    <div class="text-lg">Years Experience</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl md:text-5xl font-bold mb-3 counter" data-target="1500">internaional & Schengen</div>
+                    <div class="text-lg">Successful Visas</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+   
+<!-- Swiper Gallery Section -->
+<section class="py-20 bg-gray-100">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <span class="text-yellow-500 font-semibold">GALLERY</span>
+      <h2 class="text-4xl font-bold mt-2">Our Moments</h2>
+    </div>
+
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <img src="images/madina.jpg" alt="Gallery Image 1" class="rounded-2xl w-full h-64 object-cover" />
+        </div>
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <img src="images/madina1.jpg" alt="Gallery Image 2" class="rounded-2xl w-full h-64 object-cover" />
+        </div>
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <img src="images/makkah2.jpeg" alt="Gallery Image 3" class="rounded-2xl w-full h-64 object-cover" />
+        </div>
+         <!-- Slide 4 -->
+        <div class="swiper-slide">
+          <img src="images/turkey.jpg" alt="Gallery Image 2" class="rounded-2xl w-full h-64 object-cover" />
+        </div>
+         <!-- Slide 5 -->
+        <div class="swiper-slide">
+          <img src="images/hajj.JPG" alt="Gallery Image 2" class="rounded-2xl w-full h-64 object-cover" />
+        </div>
+         <!-- Slide 6 -->
+        <div class="swiper-slide">
+          <img src="images/umrah.JPG" alt="Gallery Image 2" class="rounded-2xl w-full h-64 object-cover" />
+        </div>
+         <!-- Slide 7 -->
+        <div class="swiper-slide">
+          <img src="images/malaysia.jpg" alt="Gallery Image 2" class="rounded-2xl w-full h-64 object-cover" />
+        </div> <!-- Slide 8 -->
+        <div class="swiper-slide">
+          <img src="images/malaysia1.jpg" alt="Gallery Image 2" class="rounded-2xl w-full h-64 object-cover" />
+        </div> <!-- Slide 9 -->
+        <div class="swiper-slide">
+          <img src="images/canada.jpg" alt="Gallery Image 2" class="rounded-2xl w-full h-64 object-cover" />
+        </div> <!-- Slide 10 -->
+        <div class="swiper-slide">
+          <img src="images/canada1.jpg" alt="Gallery Image 2" class="rounded-2xl w-full h-64 object-cover" />
+        </div>
+        </div> <!-- Slide 11 -->
+        <div class="swiper-slide">
+          <img src="images/toronto.jpeg" alt="Gallery Image 2" class="rounded-2xl w-full h-64 object-cover" />
+        </div>
+        <!-- Add more slides as needed -->
+      </div>
+      <!-- Navigation buttons -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <!-- Pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <span class="text-yellow-500 font-semibold">FAQ</span>
+                <h2 class="heading-font text-3xl md:text-4xl font-bold mt-2 mb-4">Frequently Asked Questions</h2>
+                <div class="h-1 w-20 bg-yellow-500 mx-auto"></div>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Find answers to common questions about our services</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto fade-in">
+                <div class="faq-item mb-4">
+                    <input type="checkbox" id="faq1" class="faq-toggle hidden">
+                    <label for="faq1" class="faq-question block bg-gray-50 hover:bg-gray-100 px-6 py-4 rounded-lg cursor-pointer font-semibold">
+                        What documents do I need for Hajj or Umrah visa?
+                        <i class="fas fa-chevron-down float-right transition-transform duration-300"></i>
+                    </label>
+                    <div class="faq-answer overflow-hidden max-h-0 transition-all duration-300">
+                        <div class="px-6 py-4 bg-white">
+                            <p class="text-gray-600">For Hajj and Umrah visas, you typically need:</p>
+                            <ul class="list-disc pl-5 mt-2 text-gray-600">
+                                <li>Valid passport (minimum 6 months validity)</li>
+                                <li>Completed visa application form</li>
+                                <li>Passport-sized photographs with white background</li>
+                                <li>Confirmed round-trip flight tickets</li>
+                                <li>Proof of vaccination (meningococcal, polio, depending on requirements)</li>
+                                <li>For women under 45, Mahram proof is required</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item mb-4">
+                    <input type="checkbox" id="faq2" class="faq-toggle hidden">
+                    <label for="faq2" class="faq-question block bg-gray-50 hover:bg-gray-100 px-6 py-4 rounded-lg cursor-pointer font-semibold">
+                        How early should I book my Hajj package?
+                        <i class="fas fa-chevron-down float-right transition-transform duration-300"></i>
+                    </label>
+                    <div class="faq-answer overflow-hidden max-h-0 transition-all duration-300">
+                        <div class="px-6 py-4 bg-white">
+                            <p class="text-gray-600">We strongly recommend booking your Hajj package at least 6-8 months in advance to ensure availability in premium hotels near Haram, better flight options, and time for proper preparation. Early bird discounts are often available until 4 months before Hajj.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item mb-4">
+                    <input type="checkbox" id="faq3" class="faq-toggle hidden">
+                    <label for="faq3" class="faq-question block bg-gray-50 hover:bg-gray-100 px-6 py-4 rounded-lg cursor-pointer font-semibold">
+                        Do you offer payment plans for Hajj packages?
+                        <i class="fas fa-chevron-down float-right transition-transform duration-300"></i>
+                    </label>
+                    <div class="faq-answer overflow-hidden max-h-0 transition-all duration-300">
+                        <div class="px-6 py-4 bg-white">
+                            <p class="text-gray-600">Yes, we offer flexible installment plans for Hajj packages. You can secure your booking with an initial deposit and pay the remaining amount in monthly installments. Terms and conditions apply.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-8">
+                    <a href="#contact" class="inline-block bg-blue-900 hover:bg-blue-800 text-white font-semibold px-6 py-3 rounded-lg transition">More Questions? Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <span class="text-yellow-500 font-semibold">TESTIMONIALS</span>
+                <h2 class="heading-font text-3xl md:text-4xl font-bold mt-2 mb-4">What Our Clients Say</h2>
+                <div class="h-1 w-20 bg-yellow-500 mx-auto"></div>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Hear from travelers who've experienced our services first-hand</p>
+            </div>
+            
+            <div class="swiper testimonial-slider px-2 fade-in">
+                <div class="swiper-wrapper pb-12">
+                    <!-- Testimonial 1 -->
+                    <div class="swiper-slide">
+                        <div class="bg-white p-8 rounded-xl shadow-md h-full">
+                            <div class="flex mb-4">
+                                <div class="text-yellow-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 italic mb-6">"Abbasi Consultants made our Hajj journey smooth. Their attention to detail made all the difference. When our flight was delayed, their team handled everything professionally. Highly recommended!"</p>
+                            <div class="flex items-center">
+                                <img src="https://placehold.co/60x60" alt="Ahmed Khan" class="w-12 h-12 rounded-full object-cover mr-4">
+                                <div>
+                                    <h4 class="font-bold">Mr. Ahmed Khan</h4>
+                                    <p class="text-gray-500 text-sm">Lahore • Hajj 2023</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 2 -->
+                    <div class="swiper-slide">
+                        <div class="bg-white p-8 rounded-xl shadow-md h-full">
+                            <div class="flex mb-4">
+                                <div class="text-yellow-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 italic mb-6">"Our family's Umrah trip with Abbasi was flawless. The hotel was just 5 minutes from Haram, and staff helped with everything. Already planning to book our Hajj with them!"</p>
+                            <div class="flex items-center">
+                                <img src="https://placehold.co/60x60" alt="Fatima Ahmed" class="w-12 h-12 rounded-full object-cover mr-4">
+                                <div>
+                                    <h4 class="font-bold">Fatima Ahmed</h4>
+                                    <p class="text-gray-500 text-sm">Karachi • Umrah 2022</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 3 -->
+                    <div class="swiper-slide">
+                        <div class="bg-white p-8 rounded-xl shadow-md h-full">
+                            <div class="flex mb-4">
+                                <div class="text-yellow-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 italic mb-6">"Dream World's Europe tour exceeded expectations. Hotels were excellent with prayer facilities, and our guide was knowledgeable about Islamic history too. Can't wait to travel with them again!"</p>
+                            <div class="flex items-center">
+                                <img src="https://placehold.co/60x60" alt="Dr. Usman Riaz" class="w-12 h-12 rounded-full object-cover mr-4">
+                                <div>
+                                    <h4 class="font-bold">Dr. Usman Riaz</h4>
+                                    <p class="text-gray-500 text-sm">Islamabad • Europe Tour 2022</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Offers Section -->
+    <section class="py-16 bg-blue-900 text-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center fade-in">
+                <div class="lg:w-2/3 mb-8 lg:mb-0 lg:pr-12">
+                    <h2 class="heading-font text-3xl md:text-4xl font-bold mb-4">Special Hajj & Umrah Packages</h2>
+                    <p class="text-xl mb-6">Limited time offers for spiritual journeys in 2024. Book now to secure your spot with exclusive discounts.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="bg-white text-blue-900 px-6 py-3 rounded-lg font-semibold">Early Bird Discounts</div>
+                        <div class="bg-white text-blue-900 px-6 py-3 rounded-lg font-semibold">Family Packages</div>
+                        <div class="bg-white text-blue-900 px-6 py-3 rounded-lg font-semibold">Premium Accommodations</div>
+                    </div>
+                </div>
+                <div class="lg:w-1/3 text-center">
+                    <a href="#" class="inline-block bg-yellow-400 hover:bg-yellow-500 text-gray-800 font-semibold px-8 py-4 rounded-lg text-lg transition duration-300 transform hover:scale-105">View Offers</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <span class="text-yellow-500 font-semibold">CONTACT US</span>
+                <h2 class="heading-font text-3xl md:text-4xl font-bold mt-2 mb-4">Get In Touch</h2>
+                <div class="h-1 w-20 bg-yellow-500 mx-auto"></div>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">We're here to answer your questions and book your next journey</p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-12 fade-in">
+                <div class="lg:w-1/2">
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-md">
+                        <h3 class="heading-font text-2xl font-bold mb-6">Contact Information</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex">
+                                <div class="text-yellow-500 mr-4 mt-1 text-xl"><i class="fas fa-map-marker-alt"></i></div>
+                                <div>
+                                    <h4 class="font-bold">Head Office</h4>
+                                    <p class="text-gray-600">Pinjra Pool ,Affandi Town,Hyderabad ,Pakistan</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex">
+                                <div class="text-yellow-500 mr-4 mt-1 text-xl"><i class="fas fa-phone-alt"></i></div>
+                                <div>
+                                    <h4 class="font-bold">Phone</h4>
+                                    <p class="text-gray-600">+92 307 3044150</p>
+                                    <p class="text-gray-600">+92 320 3103080</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex">
+                                <div class="text-yellow-500 mr-4 mt-1 text-xl"><i class="fas fa-envelope"></i></div>
+                                <div>
+                                    <h4 class="font-bold">Email</h4>
+                                    <p class="text-gray-600">info@abbasiconsultants.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex">
+                                <div class="text-yellow-500 mr-4 mt-1 text-xl"><i class="fas fa-clock"></i></div>
+                                <div>
+                                    <h4 class="font-bold">Opening Hours</h4>
+                                    <p class="text-gray-600">Monday - Sunday: 2:00 pM - 10:00 PM</p>
+                                    <p class="text-gray-600">Friday:Closed</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-bold mb-4">Follow Us</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-blue-900 hover:text-yellow-500 text-2xl"><i class="fab fa-facebook"></i></a>
+                                <a href="#" class="text-blue-900 hover:text-yellow-500 text-2xl"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="text-blue-900 hover:text-yellow-500 text-2xl"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="text-blue-900 hover:text-yellow-500 text-2xl"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-md">
+                        <h3 class="heading-font text-2xl font-bold mb-6">Send Us a Message</h3>
+                        <form>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                                <div>
+                                    <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
+                                    <input type="text" id="name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent" placeholder="Enter your name">
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                                    <input type="email" id="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent" placeholder="Enter your email">
+                                </div>
+                            </div>
+                            <div class="mb-6">
+                                <label for="subject" class="block text-gray-700 font-medium mb-2">Subject</label>
+                                <input type="text" id="subject" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent" placeholder="What's this about?">
+                            </div>
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                                <textarea id="message" rows="5" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent" placeholder="Type your message here"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-blue-900 hover:bg-blue-800 text-white font-semibold px-6 py-3 rounded-lg transition">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    
+   <!-- Google Map Embed: ABBASI HAJJ & UMRAH COMPANY (PVT) LTD - Hyderabad -->
+<div style="width: 100%; height: 400px;">
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3626.449348977108!2d68.3783574!3d25.3923571!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x394c715757fe9c6d%3A0x466b2555e5a305fd!2sABBASI%20HAJJ%20%26%20UMRAH%20COMPANY%20(PVT)%20LTD!5e0!3m2!1sen!2s!4v1722257350380" 
+    width="100%" 
+    height="100%" 
+    style="border:0;" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
+
+
+
+ 
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <img src="images/Abbasi Consultant logo Final-01.png" alt="Abbasi Consultants Logo" class="h-12 mb-4">
+                    <p class="text-gray-300">Providing premium travel and visa services with excellence since 1998.</p>
+                </div>
+                
+                <div>
+                    <h4 class="heading-font text-xl font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-300 hover:text-yellow-400 transition">Home</a></li>
+                        <li><a href="#about" class="text-gray-300 hover:text-yellow-400 transition">About Us</a></li>
+                        <li><a href="#services" class="text-gray-300 hover:text-yellow-400 transition">Services</a></li>
+                        <li><a href="#companies" class="text-gray-300 hover:text-yellow-400 transition">Group Companies</a></li>
+                        <li><a href="#contact" class="text-gray-300 hover:text-yellow-400 transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="heading-font text-xl font-bold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-yellow-400 transition">Hajj Packages</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-yellow-400 transition">Umrah Packages</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-yellow-400 transition">Visa Services</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-yellow-400 transition">International Tours</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-yellow-400 transition">Flight Ticketing</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="heading-font text-xl font-bold mb-4">Newsletter</h4>
+                    <p class="text-gray-300 mb-4">Subscribe to receive updates, travel offers, and visa tips.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-lg w-full focus:outline-none text-gray-900">
+                        <button type="submit" class="bg-yellow-400 hover:bg-yellow-500 text-gray-800 px-4 py-2 rounded-r-lg font-semibold transition"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <div class="flex space-x-6 mb-4 md:mb-0">
+                    <a href="#" class="text-gray-300 hover:text-yellow-400 transition text-xl"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-gray-300 hover:text-yellow-400 transition text-xl"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-gray-300 hover:text-yellow-400 transition text-xl"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-gray-300 hover:text-yellow-400 transition text-xl"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <div class="text-gray-300">
+                    <p>&copy; 2023 Abbasi Consultants. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Initialize Swiper for testimonial slider
+        const testimonialSwiper = new Swiper('.testimonial-slider', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                }
+            }
+        });
+
+        // Counter animation
+        function animateCounters() {
+            const counters = document.querySelectorAll('.counter');
+            const speed = 200;
+            
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+                const increment = target / speed;
+                
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(animateCounters, 1);
+                } else {
+                    counter.innerText = target;
+                }
+            });
+        }
+
+        // Intersection Observer for fade-in animations
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('appear');
+                    if (entry.target.classList.contains('counter-container')) {
+                        animateCounters();
+                    }
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        fadeElements.forEach(element => {
+            observer.observe(element);
+        });
+
+        // Gallery filter
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                button.classList.add('active');
+                
+                const filter = button.getAttribute('data-filter');
+                
+                galleryItems.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+        
+    </script>
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    loop: true,
+    spaceBetween: 20,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    },
+  });
+</script>
+<!-- WhatsApp Floating Button -->
+<a
+  href="https://wa.me/923073044150"
+  class="whatsapp-float"
+  target="_blank"
+  aria-label="Chat on WhatsApp"
+>
+  <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp" />
+</a>
+
+</body>
+</html>
