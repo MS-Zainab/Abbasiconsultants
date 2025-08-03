@@ -860,6 +860,42 @@
             </div>
         </div>
     </section>
+<div id="chat-container" style="position: fixed; bottom: 20px; right: 20px; width: 300px;">
+  <div style="background: #0f4c81; color: white; padding: 10px; border-radius: 8px 8px 0 0;">
+    Ask Anything 💬
+  </div>
+  <div id="chat-box" style="background: white; height: 300px; overflow-y: auto; padding: 10px; border: 1px solid #ccc;"></div>
+  <input type="text" id="user-input" placeholder="Type your question..." style="width: 100%; padding: 10px; border: 1px solid #ccc; border-top: none;">
+</div>
+
+<script>
+  const chatBox = document.getElementById("chat-box");
+  const userInput = document.getElementById("user-input");
+
+  userInput.addEventListener("keydown", async (e) => {
+    if (e.key === "Enter") {
+      const message = userInput.value;
+      appendMessage("You", message);
+      userInput.value = "";
+
+      const response = await fetch("http://localhost:5000/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message }),
+      });
+
+      const data = await response.json();
+      appendMessage("AI", data.reply);
+    }
+  });
+
+  function appendMessage(sender, message) {
+    const msgDiv = document.createElement("div");
+    msgDiv.innerHTML = `<strong>${sender}:</strong> ${message}`;
+    chatBox.appendChild(msgDiv);
+    chatBox.scrollTop = chatBox.scrollHeight;
+  }
+</script>
 
     <!-- Testimonials Section -->
     <section id="testimonials" class="py-20 bg-gray-50">
@@ -1306,6 +1342,42 @@
     <a href="https://wa.me/923073044150" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
         <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp" />
     </a>
+<div id="chat-container" style="position: fixed; bottom: 20px; right: 20px; width: 300px;">
+  <div style="background: #0f4c81; color: white; padding: 10px; border-radius: 8px 8px 0 0;">
+    Ask Anything 💬
+  </div>
+  <div id="chat-box" style="background: white; height: 300px; overflow-y: auto; padding: 10px; border: 1px solid #ccc;"></div>
+  <input type="text" id="user-input" placeholder="Type your question..." style="width: 100%; padding: 10px; border: 1px solid #ccc; border-top: none;">
+</div>
+
+<script>
+  const chatBox = document.getElementById("chat-box");
+  const userInput = document.getElementById("user-input");
+
+  userInput.addEventListener("keydown", async (e) => {
+    if (e.key === "Enter") {
+      const message = userInput.value;
+      appendMessage("You", message);
+      userInput.value = "";
+
+      const response = await fetch("http://localhost:5000/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message }),
+      });
+
+      const data = await response.json();
+      appendMessage("AI", data.reply);
+    }
+  });
+
+  function appendMessage(sender, message) {
+    const msgDiv = document.createElement("div");
+    msgDiv.innerHTML = `<strong>${sender}:</strong> ${message}`;
+    chatBox.appendChild(msgDiv);
+    chatBox.scrollTop = chatBox.scrollHeight;
+  }
+</script>
 
     
 </body>
